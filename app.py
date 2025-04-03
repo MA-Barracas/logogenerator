@@ -58,7 +58,7 @@ if submitted:
             with st.spinner('Llamando a la API de Replicate... esto puede tardar un poco...'):
                 # Llamada a la API de Replicate
                 output = replicate.run(
-                    "black-forest-labs/flux-1.1-pro:7e1a6f0d6b27e73fba861ef48a16a811e1689f3a0f04f1e7a275f77f014b70e0", # Usamos la versión específica para mayor estabilidad
+                    "black-forest-labs/flux-1.1-pro", # Usamos la versión específica para mayor estabilidad
                     input={
                         "seed": seed,
                         "prompt": prompt,
