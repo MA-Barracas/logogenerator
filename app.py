@@ -12,7 +12,7 @@ st.caption("Usando el modelo black-forest-labs/flux-1.1-pro en Replicate.")
 # --- Obtener API Key de Replicate ---
 # Intenta obtener la API key desde los secretos de Streamlit (si se despliega allí)
 # o desde las variables de entorno (para Cloud Run u otros)
-replicate_api_key = st.secrets.get("REPLICATE_API_TOKEN") if hasattr(st, 'secrets') else os.environ.get("REPLICATE_API_TOKEN")
+replicate_api_key = os.environ.get("REPLICATE_API_TOKEN")
 
 if not replicate_api_key:
     st.error("🛑 La API Key de Replicate no está configurada.")
